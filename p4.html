@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Question 1
+        var str = ""
+        for(let i=1;i<=7;i++)
+        {
+            for(let j=1;j<=i;j++)
+            {
+                str += "#"
+            }
+            str += "\n"
+        }
+        console.log(str)
+
+        // Question 2
+        var strArray= [
+            "<option>Jazz</option>",
+            "<option>Blues</option>",
+            "<option>New Age</option>",
+            "<option>Classical</option>",
+            "<option>Opera</option>"]
+
+        for(var index in strArray)
+        {
+            var str = strArray[index].split('<').join('|').split('>').join('|').split('/').join('|')
+            console.log(index,str.split('|')[2])
+        }
+    </script>
+</body>
+</html>

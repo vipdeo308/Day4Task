@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // XHR Object
+        var request=new XMLHttpRequest()
+        
+        console.log(request) // an Object
+
+        // Open the Connection
+        request.open("GET","https://restcountries.com/v3.1/all")
+        
+        // Sending a Connection
+        request.send()
+
+        // JSON string => Server Response
+        console.log(request)
+
+        // Anonymous Function
+        request.onload=function()
+        {
+            // Converting JSON String to Objects
+            var data=JSON.parse(request.response)
+
+            // Names & Flags of Countries
+            for(var value of data){
+               console.log("Name: ",value.name,"\n","Population: ",value.population,"\n",
+                           "Region: ",value.region,"\n","Sub-Region: ",value.subregion)
+            }
+        }
+    </script>
+</body>
+</html>

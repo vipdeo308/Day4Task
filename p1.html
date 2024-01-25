@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var obj1={
+            name:"Person1",
+            age:5
+        }
+
+        var obj2={
+            age:5,
+            name:"Person1"
+        }
+
+        var obj3={
+            name:"Person1",
+            age:"5"
+        }
+
+        var obj4={
+            age:5,
+            name:"Person2"
+        }
+
+        // checking for equality only
+        if(obj1.name==obj2.name && obj1.age==obj2.age)
+            console.log("Objects obj1 & obj2 are Equal!")
+        else 
+            console.log("Objects obj1 & obj2 are Unequal!")
+
+        if(obj1.name==obj3.name && obj1.age==obj3.age)
+            console.log("Objects obj1 & obj3 are Equal!")
+        else 
+            console.log("Objects obj1 & obj3 are Unequal!")
+
+        if(obj1.name==obj4.name && obj1.age==obj4.age)
+            console.log("Objects obj1 & obj4 are Equal!")
+        else 
+            console.log("Objects obj1 & obj4 are Unequal!")
+
+        // Checking for both equlity and datatype    
+        if(obj1.name===obj2.name && obj1.age===obj2.age)
+            console.log("Objects obj1 & obj2 are Equal and Values have Same Datatypes!")
+        else 
+            console.log("Objects obj1 & obj2 are Unequal or Values have Different Datatypes!")
+
+        if(obj1.name===obj3.name && obj1.age===obj3.age)
+            console.log("Objects obj1 & obj3 are Equal and Values have Same Datatypes!")
+        else 
+            console.log("Objects obj1 & obj3 are Unequal or Values have Different Datatypes!")
+
+        if(obj1.name===obj4.name && obj1.age===obj4.age)
+            console.log("Objects obj1 & obj4 are Equal and Values have Same Datatypes!")
+        else 
+            console.log("Objects obj1 & obj4 are Unequal or Values have Different Datatypes!")
+
+    </script>
+</body>
+</html>
